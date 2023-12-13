@@ -88,6 +88,10 @@ public class KnapsackZeroOne {
         System.out.print("Enter the Knapsack Capacity: ");
         int knapsackCapacity = new Scanner(System.in).nextInt();
         boolean TraceBack[][] = new boolean[numItems+1][knapsackCapacity + 1];
+        System.out.println("Item "+"  Weight "+" Profit");
+        for(int i = 0; i<numItems; i++){
+            System.out.println(i+1+"\t"+weights[i]+"\t"+profit[i]);
+        }
         int result = knapsack(knapsackCapacity, weights, profit, numItems, TraceBack);
         System.out.println("Maximum Profit: "+result);
         traceback(knapsackCapacity, weights, TraceBack);
